@@ -44,7 +44,127 @@ color: var(--main-color);
 .header-items{
     display: flex;
     gap:0.5em;
+    text-transform: capitalize;
+}
+.header-items h4 {
+    cursor: pointer;
 }
 .active{
     color: var(--main-color);
+}
+.proudact-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5em;
+}
+.proudact-card{
+    border: var(--border);
+    border-radius: var(--reduis-lg);
+    width: 20em;
+    height: 25em; 
+    /* background-color: red; */
+    overflow:hidden;
+    transition: 4s;
+}
+.proudact-card-image{
+    overflow: hidden;
+    position: relative;
+}
+.proudact-card-image img{
+    width: 100%;
+    height: 15em;
+border: var(--border);
+overflow: hidden;
+margin-bottom: .5em;
+transition: .4s;
+}
+.proudact-catigory-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+    color:var(--gray-color);
+    padding: .5em;
+}
+.proudact-catigory-rating svg{
+    color:var(--golden-color);
+}
+.proudact-title{
+    font-size: 8px;
+    font-weight: 200;
+    font-family: var(--second-font);
+     padding: 1em;
+     color: var(--dark-color);
+     margin-bottom: 5em;
+}
+.proudact-pricing-weghit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    gap: .5em;
+}
+.price strong{
+    font-weight: 700;
+    color: var(--dark-color);
+}
+.price del{
+    font-weight: 400;
+    color: var(--gray-color);
+}
+.weghit{
+    font-weight: 500;
+    color: var(--gray-color);
+}
+.proudact-image-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    position: absolute;
+    z-index: 111111;
+       bottom: -35%;
+    left: 47%;
+    transform: translatex(-50%);
+    cursor: pointer;
+    transition: .4s;
+}
+.proudact-image-icons .icon{
+    width: 1.5em;
+    height: 1.5em;
+     border-radius: var(--reduis-lg);
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: var(--gray-color);
+    visibility: hidden;
+    transition: .4s;
+}
+.icon svg{
+    width: 7px;
+    height: 7px;
+}
+.icon:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.proudact-card:hover .icon{
+    visibility: visible;
+    bottom: 9%;
+}
+.proudact-card:hover img { 
+    transform: scale(1,1.5);
+}
+.proudact-image-icons:hover .icon {
+    transition: .4s;
+}
+
+.proudact-card:hover .proudact-image-icons{
+    bottom: 9%;
+}
+.outOfStock{
+    color: var(--main-color);
+background: #a0aeeb;
 }
